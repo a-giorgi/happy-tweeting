@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+      <style>
+          html,
+          body {
+            width: 300px;
+            background-color: rgb(26, 29, 63);
+            color: rgb(221, 221, 221);
+            font-family: Arial, Helvetica, sans-serif;
+          }
+          button {
+            margin: 3px;
+            color:rgb(221, 221, 221);
+            border: 1px solid rgb(221, 221, 221);
+            background-color: rgb(26, 29, 63);
+            border-radius: 5px;
+            padding: 3px;
+            
+          }
+          button:hover{
+            background-color: rgb(8, 9, 19);
+            cursor: pointer;
+          }
+          button:disabled{
+            background-color: rgb(124, 124, 124);
+          }
+          input[type=text] {
+            background-color: rgba(62, 66, 116, 0.753);
+            padding: 3px;
+            margin: 3px;
+            color: rgb(221, 221, 221);
+            border-radius: 5px;
+          }
+
+        .hidden {
+            display: none;
+        }
+        .inline-block{
+          display: inline-block;
+        }
+        .green{
+          color:green;
+          font-weight: bold;
+        }
+        .red{
+          color:red;
+          font-weight: bold;
+        }
+        #saved-server-url{
+          font-weight: bold;
+        }
+        
+      </style>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="popup-content">
+      Current server url:<br>
+      <span id="saved-server-url"></span><br>
+      Status: <span id="on-or-off">OFFLINE</span>
+      <hr>
+      Set connection<br>
+      Url:
+      <input type="text" id="server-url" value="http://localhost:8000/happy_tweeting/">
+  
+      <button id="check-button">Check</button> 
+      <div class="hidden green" id="check-mark" >&#10003;</div>
+      <br>
+      <button id="enable-button" disabled>Set Server URL</button>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="check_connection.js"></script>
+
+
+  </body>
+
+</html>

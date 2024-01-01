@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Happy Tweeting",
+    "version": "1.0",
+  
+    "description": "Remove bad sentiment tweets",
+  
+    "icons": {
+      "48": "icons/bird.svg"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.twitter.com/*"],
+        "js": ["filter.js"]
+      }
+    ],
+
+    "permissions": [ "activeTab", "storage", "webRequest", "*://*/*"],
+
+
+    "browser_action": {
+      "default_icon": "icons/bird.svg",
+      "default_title": "Happy Tweeting",
+      "default_popup": "popup/check_connection.html"
+    }
+
+    
+  }
+  
