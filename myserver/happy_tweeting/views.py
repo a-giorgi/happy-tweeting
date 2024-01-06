@@ -1,19 +1,19 @@
 import json
-import sys
-
-from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from .tf_model.evaluator import Evaluator
+
+evaluator = Evaluator(verbose=True)
 
 
 @csrf_exempt
 def index(request):
     if request.method == "POST":
-        body_unicode = request.body.decode('utf-8')
-        body = json.loads(body_unicode)
-        print(body)
+        # body_unicode = request.body.decode('utf-8')
+        body = json.loads(request.body)
+        score = evaluator.predict(body["sentence"])
         response = JsonResponse({
-            "score": 0.9
+            "score": str(score)
         })
         response["Access-Control-Allow-Origin"] = "*"
         return response
