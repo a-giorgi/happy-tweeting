@@ -51,7 +51,7 @@ function evaluateTweet(tweet, element){
    xhr.open("POST", server , true);
    xhr.send(
      JSON.stringify({
-         tweet: tweet
+         sentence: tweet
      })
    );
    xhr.onload = function(e) {
