@@ -44,6 +44,7 @@ All development details have been documented in the file ```project_diary.ipynb`
 2. Select the `manifest.json` file within the `myextension` directory.
 3. Once installed, add the backend URL and click "Check."
 4. If the connection is successful (indicated by a green checkmark), click "Set Server URL" to confirm the backend.
+
 ![firefox_extension.png](/images/firefox_extension.png)
 
 If everything has been configured correctly, visiting Twitter should display a green bar at the top.
