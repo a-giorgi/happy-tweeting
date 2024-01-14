@@ -1,0 +1,14 @@
+Django==5.0.1
+h5py==3.10.0
+keras==2.15.0
+numpy==1.26.3
+tensorboard==2.15.1
+tensorboard-data-server==0.7.2
+tensorflow==2.15.0.post1
+tensorflow-estimator==2.15.0
+tensorflow-hub==0.15.0
+tensorflow-io-gcs-filesystem==0.35.0
+tensorrt==8.6.1.post1
+tensorrt-bindings==8.6.1
+tensorrt-libs==8.6.1
+
