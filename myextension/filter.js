@@ -1,5 +1,5 @@
 let server = undefined;
-let score = 0.6;
+let score = 0.1;
 (() => {
     if (window.hasRun) {
         return;
@@ -62,7 +62,6 @@ function evaluateTweet(tweet, element){
         }
       }else if(this.readyState === XMLHttpRequest.DONE && this.status !== 200) {
         console.log("xhr error");
-        //TODO 
       }
   }
 }
